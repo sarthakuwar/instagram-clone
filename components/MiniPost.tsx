@@ -5,7 +5,7 @@ import PostOptions from "./PostOptions";
 import UserAvatar from "./UserAvatar";
 import { useSession } from "next-auth/react";
 import { PostWithExtras } from "@/lib/definitions";
-import Timestamp from "./Timestamp";
+
 
 function MiniPost({ post }: { post: PostWithExtras }) {
   const username = post.user.username;
@@ -28,7 +28,7 @@ function MiniPost({ post }: { post: PostWithExtras }) {
           <p className="font-medium">{post.caption}</p>
         </div>
         <div className="flex h-5 items-center space-x-2.5">
-          <Timestamp createdAt={post.createdAt} />
+         
           <PostOptions
             post={post}
             userId={user.id}

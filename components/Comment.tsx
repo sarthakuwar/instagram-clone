@@ -5,7 +5,7 @@ import CommentOptions from "@/components/CommentOptions";
 import UserAvatar from "@/components/UserAvatar";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import Timestamp from "./Timestamp";
+
 
 type Props = {
   comment: CommentWithExtras;
@@ -30,7 +30,7 @@ function Comment({ comment, inputRef }: Props) {
           <p className="font-medium">{comment.body}</p>
         </div>
         <div className="flex h-5 items-center space-x-2.5">
-          <Timestamp createdAt={comment.createdAt} />
+          
           <button
             className="text-xs font-semibold text-neutral-500"
             onClick={() => inputRef?.current?.focus()}
